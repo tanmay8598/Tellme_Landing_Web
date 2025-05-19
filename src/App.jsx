@@ -34,7 +34,7 @@ export default function App() {
       <div className="absolute top-[-80px] left-[-100px] w-[300px] h-[300px] bg-[#C9E8DC] rounded-full opacity-30 z-0"></div>
       <div className="absolute bottom-[-100px] right-[-80px] w-[250px] h-[250px] bg-[#C9E8DC] rounded-full opacity-20 z-0"></div>
 
-      <header className="relative z-10 bg-[#FFF4EC] p-4 flex justify-between items-center shadow-md sticky top-0">
+      <header className=" z-10  bg-[#FFF4EC] p-4 flex justify-between items-center shadow-md sticky top-0">
         <img
           src="/src/assets/tellmeLogo2.png"
           alt="TellMe Logo"
@@ -74,11 +74,14 @@ export default function App() {
       </motion.section>
 
       <section className="relative z-10 bg-[#FFF4EC] px-6 py-5 text-center">
-        <div className="max-w-3xl mx-auto  px-8 py-12">
-          <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800">
-            Notify Me When TellMe is ready!
-          </h3>
+        <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800">
+          Feeling unheard? Let us hold that space for you.
+        </h3>
 
+        <div className="max-w-3xl mx-auto  px-8">
+          <p className="text-3xl sm:text-4xl font-medium mb-6 text-gray-800">
+            Join early to be notified when we launch.
+          </p>
           <form className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <input
               type="email"
@@ -92,32 +95,35 @@ export default function App() {
               Subscribe
             </button>
           </form>
-          <p className="mt-8 text-xl text-gray-700 font-medium">
-            It’s your first step before therapy.
-          </p>
         </div>
       </section>
 
-      <section className="px-6 py-5 bg-[#FFF4EC] text-center sm:text-left max-w-6xl mx-auto">
-        <div className=" ">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-snug mb-6">
-            No Analysis. <br />
-            No Judgment. <br />
-            No Labels.
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-700 mb-4">
-            Just a space to talk, vent and be heard—gently guided by
-            Psychologists.
-          </p>
-          <p className="text-gray-500 text-base sm:text-lg">
-            Because sometimes, you just need guidance and not diagnosis.
-          </p>
+      <section className="px-6 py-10 bg-[#FFF4EC] max-w-6xl mx-auto text-center sm:text-left">
+        <div className="grid sm:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-snug mb-4">
+              No Analysis. <br />
+              No Judgment. <br />
+              No Labels.
+            </h2>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-8">
+              Just a space to talk, vent and be heard—gently guided by
+              Psychologists.
+            </h2>
+
+            <p className="text-gray-500 text-base sm:text-lg">
+              Because sometimes, you just need guidance and not diagnosis.
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="relative z-10 px-6 py-12 max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold mb-8">What we offer ?</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             "Compassionate Mental Health Practioners",
             "Seemless Audio or Video Connection",
