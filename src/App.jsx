@@ -36,11 +36,7 @@ export default function App() {
 
       <header className=" z-10  bg-[#FFF4EC] p-4 shadow-md sticky top-0 ">
         <div className="flex justify-between items-center max-w-5xl mx-auto ">
-          <img
-            src="/src/assets/tellmeLogo2.png"
-            alt="TellMe Logo"
-            className="h-14 "
-          />
+          <img src="/tellmeLogo2.png" alt="TellMe Logo" className="h-14 " />
           <motion.button
             className="bg-[#336727] text-white px-6 py-2 rounded-full shadow-md hover:opacity-90 transition"
             whileTap={{ scale: 0.95 }}
@@ -68,7 +64,7 @@ export default function App() {
 
         <div className="flex-1 mt-8 lg:mt-0 lg:ml-10">
           <img
-            src="/src/assets/heroTellme.png"
+            src="/heroTellme.png"
             alt="Illustration"
             className="w-full max-w-md mx-auto"
           />
