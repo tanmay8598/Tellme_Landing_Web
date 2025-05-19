@@ -34,18 +34,20 @@ export default function App() {
       <div className="absolute top-[-80px] left-[-100px] w-[300px] h-[300px] bg-[#C9E8DC] rounded-full opacity-30 z-0"></div>
       <div className="absolute bottom-[-100px] right-[-80px] w-[250px] h-[250px] bg-[#C9E8DC] rounded-full opacity-20 z-0"></div>
 
-      <header className=" z-10  bg-[#FFF4EC] p-4 flex justify-between items-center shadow-md sticky top-0">
-        <img
-          src="/src/assets/tellmeLogo2.png"
-          alt="TellMe Logo"
-          className="h-14 "
-        />
-        <motion.button
-          className="bg-[#336727] text-white px-6 py-2 rounded-full shadow-md hover:opacity-90 transition"
-          whileTap={{ scale: 0.95 }}
-        >
-          Get Started
-        </motion.button>
+      <header className=" z-10  bg-[#FFF4EC] p-4 shadow-md sticky top-0 ">
+        <div className="flex justify-between items-center max-w-5xl mx-auto ">
+          <img
+            src="/src/assets/tellmeLogo2.png"
+            alt="TellMe Logo"
+            className="h-14 "
+          />
+          <motion.button
+            className="bg-[#336727] text-white px-6 py-2 rounded-full shadow-md hover:opacity-90 transition"
+            whileTap={{ scale: 0.95 }}
+          >
+            Get Started
+          </motion.button>
+        </div>
       </header>
 
       <motion.section
