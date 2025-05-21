@@ -1,20 +1,38 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function Footer() {
   return (
-    <div className="p-5 gap-10 bg-green-200 flex flex-col justify-between items-center">
-      <div className="flex flex-col justify-center items-center gap-3 mt-5">
-        <h1 className="text-2xl "> Click. Connect. Breath.</h1>
-        <p className="text-md">Your first 10 minutes are free to feel heard.</p>
-        <div className="bg-white p-2 rounded-4xl px-4">
-          <button>Notify Me</button>
-        </div>
-      </div>
-      <div className="flex flex-col justify-center items-center gap-3">
-        <p className="text-md">Home | Contact | Links</p>
-        <p className="text-md">Copyright 2025 @TellMe all rights reserved</p>
-      </div>
-    </div>
+    <>
+      <motion.section
+        className="relative z-10 bg-[#5f8458] px-6 py-16 text-center"
+        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-2xl text-white font-bold mb-4">
+          Click. Connect. Breathe.
+        </h2>
+        <p className="mb-4 text-white ">
+          Your first 10 minutes are free to feel heard.
+        </p>
+        <motion.button
+          className="bg-[#FFF4EC] text-[#352F2F] px-6 py-3 rounded-full shadow-md hover:opacity-90 transition"
+          whileTap={{ scale: 0.95 }}
+        >
+          Notify Me
+        </motion.button>
+      </motion.section>
+
+      <footer className="relative z-10 bg-[#5f8458] text-center py-6 text-sm text-white">
+        <p className="mt-2">
+          © 2025 HeartTales Wholeness Pvt. Ltd. All rights reserved.
+        </p>
+        <p>
+          Made with <span className="text-red-500">♥</span> in India
+        </p>
+      </footer>
+    </>
   );
 }
 
