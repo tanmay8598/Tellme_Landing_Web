@@ -42,7 +42,7 @@ function AboutUs() {
           className="flex flex-row justify-start items-center mb-5 gap-5"
         >
           <img
-            src="/public/shiddhantImage.jpg"
+            src="/public/shiddantR.png"
             alt=""
             className="h-10 rounded-4xl"
           />
