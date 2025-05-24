@@ -91,7 +91,7 @@ const Home = () => {
 
         <div className="flex-1 mt-8 lg:mt-0 lg:ml-10">
           <img
-            src="/heroTellme.png"
+            src="/OviNew.png"
             alt="Illustration"
             className="w-full max-w-md mx-auto"
           />

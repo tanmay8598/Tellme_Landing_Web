@@ -5,7 +5,7 @@ function Hero() {
     <div className="bg-white p-5 flex flex-col lg:flex-row justify-around items-center">
       <div className="w-1/2 flex flex-col items-start gap-4">
         <img
-          src="/public/owl.jpg"
+          src="/public/OviNew.png"
           alt="Ovi illustration"
           className=" w-44 h-44"
         />
