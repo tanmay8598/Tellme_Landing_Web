@@ -41,11 +41,7 @@ function AboutUs() {
           variants={sectionVariants}
           className="flex flex-row justify-start items-center mb-5 gap-5"
         >
-          <img
-            src="/public/shiddantR.png"
-            alt=""
-            className="h-10 rounded-4xl"
-          />
+          <img src="/shiddantR.png" alt="" className="h-10 rounded-4xl" />
           <p>by Dr Siddhant R</p>
         </motion.div>
 
