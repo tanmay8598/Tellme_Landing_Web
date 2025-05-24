@@ -1,5 +1,5 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React, { useState } from "react";
 
 const Home = () => {
   const listeners = [
@@ -28,6 +28,45 @@ const Home = () => {
       time: "180 mins",
     },
   ];
+
+  const [resultMessage, setResultMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setResultMessage("Please wait...");
+
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      // console.log(result);
+
+      if (response.status === 200) {
+        setResultMessage("Subscribed successfully");
+        e.target.reset();
+      } else {
+        setResultMessage(result.message);
+      }
+    } catch (error) {
+      console.error(error);
+      setResultMessage("Something went wrong!");
+    }
+
+    setTimeout(() => {
+      setResultMessage("");
+    }, 3000);
+  };
 
   return (
     <div className="relative bg-[#FFF4EC] text-[#352F2F] font-sans overflow-hidden">
@@ -64,21 +103,34 @@ const Home = () => {
           Feeling unheard? Let us hold that space for you.
         </h3>
 
-        <div className="max-w-3xl mx-auto  px-8">
+        <div className="max-w-3xl mx-auto px-8">
           <p className="text-3xl sm:text-4xl font-medium mb-6 text-gray-800">
             Join early to be notified when we launch.
           </p>
-          <form className="flex flex-col sm:flex-row justify-center items-center gap-4">
+
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col sm:flex-row justify-center items-center gap-4"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="78dc270d-ca8f-477d-974b-86260754e86d"
+            />
+
             <input
               type="email"
+              name="email"
+              required
               placeholder="name@example.com"
               className="w-full sm:w-auto flex-1 px-4 py-3 border border-gray-300 rounded-lg text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
+
             <button
               type="submit"
-              className="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-300 shadow-md"
+              className="px-6 py-3 bg-gray-800 text-white rounded-lg cursor-pointer hover:bg-gray-700 transition-colors duration-300 shadow-md"
             >
-              Subscribe
+              {resultMessage ? resultMessage : "Notify Me"}
             </button>
           </form>
         </div>

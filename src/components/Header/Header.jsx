@@ -20,13 +20,6 @@ function Header() {
           <Link to="/aboutus" className="hover:underline text-xs md:text-lg">
             About us
           </Link>
-
-          <motion.button
-            className="bg-[#336727] text-white px-3 md:px-6 py-1 md:py-2 rounded-full shadow-md hover:opacity-90 transition"
-            whileTap={{ scale: 0.95 }}
-          >
-            Get Started
-          </motion.button>
         </div>
       </div>
     </header>

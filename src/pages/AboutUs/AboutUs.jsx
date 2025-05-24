@@ -60,14 +60,13 @@ function AboutUs() {
           <strong>1 in 4</strong> people will experience a mental health
           disorder in their lifetime. For every suicide, at least{" "}
           <strong>20</strong> individuals attempt it. <strong>50%</strong> of
-          all lifetime mental illnesses begin by age 14, and
+          all lifetime mental illnesses begin by age 14, and{" "}
           <strong>75%</strong> by age 24. An estimated{" "}
           <strong>700 million</strong> people globally suffer from an untreated
           mental health condition. Depression is the leading cause of disability
           worldwide, affecting over <strong>280 million</strong> people.
-          Approximately
-          <strong>75%</strong> of those in need of mental health support never
-          seek professional help.
+          Approximately <strong>75%</strong> of those in need of mental health
+          support never seek professional help.
         </motion.p>
 
         <motion.p
